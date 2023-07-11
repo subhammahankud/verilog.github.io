@@ -1,0 +1,38 @@
+$date
+	Fri May 12 18:12:59 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module level_sensitive_latch_tb $end
+$var wire 1 ! Q $end
+$var reg 1 " D $end
+$var reg 1 # En $end
+$scope module DUT $end
+$var wire 1 " D $end
+$var wire 1 # En $end
+$var wire 1 ! Q $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x#
+x"
+x!
+$end
+#50
+0"
+0#
+#100
+1"
+#150
+0!
+0"
+1#
+#200
+1!
+1"

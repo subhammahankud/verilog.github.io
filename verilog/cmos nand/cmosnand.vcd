@@ -1,0 +1,55 @@
+$date
+	Wed May 17 23:28:05 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module cmosnand_tb $end
+$var wire 1 ! out $end
+$var reg 1 " in1 $end
+$var reg 1 # in2 $end
+$var integer 32 $ k [31:0] $end
+$scope module DUT $end
+$var wire 1 % a $end
+$var wire 1 ! f $end
+$var wire 1 & gnd $end
+$var wire 1 ' vdd $end
+$var wire 1 " x $end
+$var wire 1 # y $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1'
+0&
+x%
+b0 $
+x#
+x"
+x!
+$end
+#10
+b1 $
+0"
+1!
+z%
+0#
+#20
+b10 $
+0%
+1#
+#30
+b11 $
+1"
+z%
+0#
+#40
+b100 $
+0!
+0%
+1#
+#50

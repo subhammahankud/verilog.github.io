@@ -1,0 +1,17 @@
+module comparator_tb();
+parameter word_size=16;
+reg [word_size-1:0] A,B;
+wire lt,gt,eq;
+comparator DUT(A,B,lt,gt,eq);
+initial
+begin
+$dumpfile("comparator.vcd");
+$dumpvars(0,comparator_tb);
+$monitor($time,"A=%h,B=%h,lt=%b,gt=%b,eq=%b",A,B,lt,gt,eq);
+#1 A=16'hffff; B=16'hffef;
+#1 A=16'hf0f0; B=16'hf0ff;
+#1 A=16'habcd; B=16'habcd;
+#1 A=16'hafed; B=16'hafde;
+#5 $finish;
+end
+endmodule

@@ -1,0 +1,11 @@
+// verilog code for 2to1mux
+`timescale 10ns/1ns
+module mux21(in1,in2,s,f);
+input in1,in2,s;
+output reg f;
+always @(in1 or in2 or s)
+if (s)
+f=in2;
+else
+f=in1;
+endmodule

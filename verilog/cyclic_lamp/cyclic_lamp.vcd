@@ -1,0 +1,96 @@
+$date
+	Mon May 15 17:16:01 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module cyclic_lamp_tb $end
+$var wire 3 ! light [0:2] $end
+$var reg 1 " clock $end
+$scope module DUT $end
+$var wire 1 " clock $end
+$var reg 3 # light [0:2] $end
+$var reg 2 $ state [0:1] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx $
+bx #
+0"
+bx !
+$end
+#1
+b0 $
+b0 !
+b0 #
+1"
+#2
+0"
+#3
+b1 $
+b10 !
+b10 #
+1"
+#4
+0"
+#5
+b10 $
+b1 !
+b1 #
+1"
+#6
+0"
+#7
+b0 $
+b0 !
+b0 #
+1"
+#8
+0"
+#9
+b1 $
+b10 !
+b10 #
+1"
+#10
+0"
+#11
+b10 $
+b1 !
+b1 #
+1"
+#12
+0"
+#13
+b0 $
+b0 !
+b0 #
+1"
+#14
+0"
+#15
+b1 $
+b10 !
+b10 #
+1"
+#16
+0"
+#17
+b10 $
+b1 !
+b1 #
+1"
+#18
+0"
+#19
+b0 $
+b0 !
+b0 #
+1"
+#20
+0"

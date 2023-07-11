@@ -1,0 +1,17 @@
+module counter4bit_tb();
+parameter N=3;
+reg clk=0,rst=0;
+wire [N:0] count;
+counter4bit DUT(clk,rst,count);
+initial
+begin
+$dumpfile("counter4bit.vcd");
+$dumpvars(0,counter4bit_tb);
+$monitor($time," clk=%b,rst=%b,count=%b",clk,rst,count);
+#1 rst=1;
+#1 rst=0;
+#32
+$finish;
+end
+always #1 clk=!clk;
+endmodule

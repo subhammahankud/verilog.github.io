@@ -1,0 +1,64 @@
+$date
+	Sun May 14 11:33:39 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module comparator_tb $end
+$var wire 1 ! lt $end
+$var wire 1 " gt $end
+$var wire 1 # eq $end
+$var reg 16 $ A [15:0] $end
+$var reg 16 % B [15:0] $end
+$scope module DUT $end
+$var wire 16 & A [15:0] $end
+$var wire 16 ' B [15:0] $end
+$var reg 1 # eq $end
+$var reg 1 " gt $end
+$var reg 1 ! lt $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx '
+bx &
+bx %
+bx $
+x#
+x"
+x!
+$end
+#10
+0#
+1"
+0!
+b1111111111101111 %
+b1111111111101111 '
+b1111111111111111 $
+b1111111111111111 &
+#20
+1!
+0"
+b1111000011111111 %
+b1111000011111111 '
+b1111000011110000 $
+b1111000011110000 &
+#30
+1#
+0!
+b1010101111001101 %
+b1010101111001101 '
+b1010101111001101 $
+b1010101111001101 &
+#40
+1"
+0#
+b1010111111011110 %
+b1010111111011110 '
+b1010111111101101 $
+b1010111111101101 &
+#90

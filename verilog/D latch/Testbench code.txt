@@ -1,0 +1,15 @@
+module level_sensitive_latch_tb();
+reg D,En;
+wire Q;
+level_sensitive_latch DUT(D,Q,En);
+initial
+begin
+$dumpfile("level_sensitive_latch.vcd");
+$dumpvars(0,level_sensitive_latch_tb);
+$monitor($time,"D=%b,Q=%b,En=%b",D,Q,En);
+#5 En=0; D=0;
+#5 En=0; D=1;
+#5 En=1; D=0;
+#5 En=1; D=1;
+end
+endmodule

@@ -1,0 +1,12 @@
+`timescale 10ns/1ns
+module counter(clear,clock,count);
+parameter N=3;
+input clear,clock;
+output reg [N:0] count;
+//reg [N:0] count;
+always @(negedge clock)
+if(clear)
+count<=0;
+else 
+count<=count+1;
+endmodule

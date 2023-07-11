@@ -1,0 +1,16 @@
+// A simple 4-function ALU
+`timescale 10ns/1ns
+module simple_ALU(in1,in2,out,operation);
+parameter N=7,n=1;
+input [N:0] in1,in2;
+input [n:0] operation;
+output reg [7:0] out;
+parameter ADD=2'b00,SUB=2'b01,MUL=2'b10,DIV=2'b11;
+always @(*)
+case(operation)
+ADD: out=in1+in2;
+SUB: out=in1-in2;
+MUL: out=in1*in2;
+DIV: out=in1/in2;
+endcase
+endmodule

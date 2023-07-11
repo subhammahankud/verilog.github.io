@@ -1,0 +1,26 @@
+module counter_tb();
+parameter N=3;
+reg clear,clock;
+wire [N:0] count;
+counter DUT(clear,clock,count);
+initial
+begin
+$dumpfile("counter.vcd");
+$dumpvars(0,counter_tb);
+$monitor($time," clock=%b,clear=%b,count=%h",clock,clear,count);
+clock=0;
+clear=1;
+#1
+clear=0;
+/*#3
+clear=1;
+#2
+clear=0;*/
+#15
+clear=1;
+$finish;
+end
+always #1 clock=~clock;
+/*initial
+$monitor($time," clock=%b,clear=%b,count=%h",clock,clear,count);*/
+endmodule

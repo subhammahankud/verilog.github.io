@@ -1,0 +1,47 @@
+$date
+	Thu May 11 11:11:41 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ms
+$end
+$scope module mux16to1_tb $end
+$var wire 1 ! f $end
+$var reg 16 " a [15:0] $end
+$var reg 4 # s [3:0] $end
+$scope module DUT $end
+$var wire 16 $ in [15:0] $end
+$var wire 4 % sel [3:0] $end
+$var wire 1 ! out $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx %
+bx $
+bx #
+bx "
+x!
+$end
+#50
+0!
+b0 #
+b0 %
+b11111100001010 "
+b11111100001010 $
+#100
+1!
+b1 #
+b1 %
+#150
+0!
+b110 #
+b110 %
+#200
+1!
+b1100 #
+b1100 %
+#250

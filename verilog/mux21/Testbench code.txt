@@ -1,0 +1,20 @@
+module mux21_tb();
+reg in1,in2,s;
+wire f;
+mux21 DUT(in1,in2,s,f);
+initial
+begin
+$dumpfile("mux21.vcd");
+$dumpvars(0,mux21_tb);
+$monitor($time," in1=%b,in2=%b,s=%b,f=%b",in1,in2,s,f);
+   in1=0; in2=0; s=0;
+#1 in1=0; in2=0; s=1;
+#1 in1=0; in2=1; s=0;
+#1 in1=0; in2=1; s=1;
+#1 in1=1; in2=0; s=0;
+#1 in1=1; in2=0; s=1;
+#1 in1=1; in2=1; s=0;
+#1 in1=1; in2=1; s=1;
+$finish;
+end
+endmodule

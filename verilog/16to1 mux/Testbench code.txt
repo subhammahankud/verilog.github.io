@@ -1,0 +1,17 @@
+module mux16to1_tb();
+reg [15:0] a;
+reg [3:0] s;
+wire f;
+mux16to1 DUT(.in(a),.sel(s),.out(f));
+initial
+begin
+$dumpfile("mux16to1.vcd");
+$dumpvars(0,mux16to1_tb);
+$monitor($time,"a=%b,s=%b,f=%b",a,s,f);
+#5 a=16'b0011111100001010; s=4'b0000;
+#5 s=4'b0001;
+#5 s=4'b0110;
+#5 s=4'b1100;
+#5 $finish;
+end 
+endmodule

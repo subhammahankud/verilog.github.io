@@ -1,0 +1,19 @@
+module cmosnand_tb();
+reg in1,in2;
+wire out;
+integer k;
+cmosnand DUT(in1,in2,out);
+initial
+begin
+for(k=0;k<4;k=k+1)
+    begin
+      #1 {in1,in2}=k;
+      $display($time," in1=%b,in2=%b,out=%b",in1,in2,out);
+    end
+end
+initial
+begin
+$dumpfile("cmosnand.vcd");
+$dumpvars(0,cmosnand_tb);
+end
+endmodule

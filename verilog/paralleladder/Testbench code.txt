@@ -1,0 +1,19 @@
+module paralleladder_tb();
+reg [7:0] in1,in2;
+reg  cin;
+wire [7:0] sum;
+wire cout;
+paralleladder DUT(sum,cout,in1,in2,cin);
+initial
+begin
+$dumpfile("paralleladder.vcd");
+$dumpvars(0,paralleladder_tb);
+$monitor($time,"in1=%b,in2=%b,cin=%b,sum=%b,cout=%b",in1,in2,cin,sum,cout);
+#1 in1=8'b00001111; in2=8'b01010101; cin=1'b0;
+#1 in1=8'b11111111; in2=8'b01010101; cin=1'b0;
+#1 in1=8'b11110000; in2=8'b10010101; cin=1'b1;
+
+
+#2 $finish;
+end 
+endmodule
